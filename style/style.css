@@ -15,22 +15,23 @@ body {
 
 .title {
 	position: absolute;
-    font-size: 88px;
-    color: #333;
-    text-transform: uppercase;
-    z-index: 100;
-    font-weight: bold;
-    top: 100px;
-    left: 100px;
+  font-size: 88px;
+  color: #333;
+  text-transform: uppercase;
+  z-index: 100;
+  font-weight: bold;
+  top: 100px;
+  left: 100px;
 }
 
 .search-container {
 	position: absolute;
-    width: 400px;
-    height: 60px;
+  width: 400px;
+  height: 60px;
     background-color: #454E53;
     z-index: 100;
     top: 230px;
+    margin-bottom: 10px;
     left: 100px;
     border-radius: 30px;
     display: flex;
@@ -112,7 +113,7 @@ body {
 
 .store-container-background:hover {
     background-color: #ccc;
-    
+
 
 }
 
@@ -128,7 +129,7 @@ body {
 }
 
 .store-container {
-     border-bottom: 1px solid #979797;	
+     border-bottom: 1px solid #979797;
      cursor: pointer;
 }
 
