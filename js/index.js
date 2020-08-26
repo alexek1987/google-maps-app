@@ -5,9 +5,9 @@ var infoWindow;
 var locationSelect;
 
 function initMap() {
-    var sydney = {
-    	lat: 34.063380,
-    	lng: -118.358080
+  var sydney = {
+    lat: 34.063380,
+    lng: -118.358080
     };
     map = new google.maps.Map(document.getElementById('map'), {
       center: sydney,
@@ -16,36 +16,35 @@ function initMap() {
     });
     infoWindow = new google.maps.InfoWindow();
     searchStores();
-
     }
 
     function searchStores(){
       var foundStores = [];
-      var zipCode = document.getElementById('zip-code-input').value;
-      if(zipCode){
-        stores.forEach(function(store, index){
+        var zipCode = document.getElementById('zip-code-input').value;
+        if(zipCode){
+          stores.forEach(function(store, index){
           var postal = store.address.postalCode.substring(0, 5);
           if (postal == zipCode){
             foundStores.push(store);
           }
         })
       } else {
-          foundStores = stores;
+        foundStores = stores;
       }
 
       clearLocations();
       displayStores(foundStores);
       showStoreMarkers(foundStores);
       setOnClickListener();
-}
+    }
 
 
     function clearLocations() {
       infoWindow.close();
       for (var i = 0; i < markers.length; i++) {
        markers[i].setMap(null);
-    }
-    markers.length = 0;
+      }
+      markers.length = 0;
     }
 
 
@@ -57,8 +56,6 @@ function  setOnClickListener(){
        })
      })
 }
-
-
 
 function displayStores(stores){
 	var storesHtml = '';
@@ -90,30 +87,28 @@ function displayStores(stores){
 
 function showStoreMarkers(stores){
 	var bounds = new google.maps.LatLngBounds();
-    stores.forEach(function(store, index){
-    var latlng = new google.maps.LatLng(
-        store.coordinates.latitude,
-        store.coordinates.longitude);
-
-        var name = store.name
-        var address = store.addressLines[0];
-        createMarker(latlng, name, address, index);
-        bounds.extend(latlng);
-    })
-        map.fitBounds(bounds);
+  stores.forEach(function(store, index){
+  var latlng = new google.maps.LatLng(
+  store.coordinates.latitude,
+  store.coordinates.longitude);
+  var name = store.name
+  var address = store.addressLines[0];
+  createMarker(latlng, name, address, index);
+  bounds.extend(latlng);
+})
+  map.fitBounds(bounds);
 }
 
 function createMarker(latlng, name, address, index){
-      var html = "<b>" + name + "</b> <br/>" + address;
-          var marker = new google.maps.Marker({
-            map: map,
-            position: latlng,
-            label: `${index+1}`
-          });
-          google.maps.event.addListener(marker, 'click', function() {
-            infoWindow.setContent(html);
-            infoWindow.open(map, marker);
-          });
-          markers.push(marker);
-
+  var html = "<b>" + name + "</b> <br/>" + address;
+  var marker = new google.maps.Marker({
+  map: map,
+  position: latlng,
+  label: `${index+1}`
+  });
+  google.maps.event.addListener(marker, 'click', function() {
+  infoWindow.setContent(html);
+  infoWindow.open(map, marker);
+  });
+  markers.push(marker);
 }
