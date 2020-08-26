@@ -4,8 +4,6 @@ var markers = [];
 var infoWindow;
 var locationSelect;
 
-
-
 function initMap() {
     var sydney = {
     	lat: 34.063380,

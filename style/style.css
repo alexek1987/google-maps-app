@@ -28,13 +28,13 @@ body {
 	position: absolute;
   width: 400px;
   height: 60px;
-    background-color: #454E53;
-    z-index: 100;
-    top: 230px;
-    margin-bottom: 10px;
-    left: 100px;
-    border-radius: 30px;
-    display: flex;
+  background-color: #454E53;
+  z-index: 100;
+  top: 230px;
+  margin-bottom: 10px;
+  left: 100px;
+  border-radius: 30px;
+  display: flex;
 }
 
 .search-container input:focus {
@@ -43,58 +43,58 @@ body {
 
 .search {
 	flex-grow: 1;
-    display: flex;
-    align-items: center;
-    padding-left: 20px;
-    padding-right: 20px;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .search-container input {
 	flex-grow: 1;
-    font-size: 25px;
-    background-color: transparent;
-    border: none;
-    color: white;
+  font-size: 25px;
+  background-color: transparent;
+  border: none;
+  color: white;
 }
 
 .search i {
 	font-size: 25px;
-    color: white;
+  color: white;
 }
 
 .store-list-container {
 	position: absolute;
-    background: white;
-    width: 400px;
-    z-index: 100;
-    top: 320px;
-    left: 100px;
-    border-radius: 30px;
-    bottom: 20px;
-    display: flex;
+  background: white;
+  width: 400px;
+  z-index: 100;
+  top: 320px;
+  left: 100px;
+  border-radius: 30px;
+  bottom: 20px;
+  display: flex;
 }
 
 .store-address {
 	font-size: 21px;
-    color: #514C4C;
-    margin-top: 30px;
+  color: #514C4C;
+  margin-top: 30px;
 }
 
 .store-phone-number {
 	color: #B5ADAD;
-    margin-top: 15px;
-    margin-bottom: 15px;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 .store-number {
-    height: 30px;
-    width: 30px;
-    display: flex;
-    align-items: center;
-    background-color: #454E53;
-    color: #B5ADAD;
-    justify-content: center;
-    border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  align-items: center;
+  background-color: #454E53;
+  color: #B5ADAD;
+  justify-content: center;
+  border-radius: 50%;
 }
 
 .store-address span {
@@ -103,17 +103,15 @@ body {
 
 .store-container-background {
 	display: flex;
-    margin-top: 12px;
-    margin-bottom: 12px;
-    border-radius: 18px;
-    padding-left: 8px;
-    padding-right: 8px;
-
+  margin-top: 12px;
+  margin-bottom: 12px;
+  border-radius: 18px;
+  padding-left: 8px;
+  padding-right: 8px;
 }
 
 .store-container-background:hover {
-    background-color: #ccc;
-
+  background-color: #ccc;
 
 }
 
